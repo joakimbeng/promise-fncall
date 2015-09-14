@@ -48,6 +48,7 @@ Returns: `Promise`, which resolves to the result of calling `fn` with the resolv
 * [`promise-not`](https://github.com/joakimbeng/promise-not)
 * [`promise-all`](https://github.com/joakimbeng/promise-all)
 * [`promise-get`](https://github.com/joakimbeng/promise-get)
+* [`promise-fnapply`](https://github.com/joakimbeng/promise-fnapply)
 
 ## License
 

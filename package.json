@@ -25,7 +25,7 @@
   },
   "repository": "joakimbeng/promise-fncall",
   "dependencies": {
-    "promise-all": "^1.0.0",
+    "promise-fnapply": "^1.0.0",
     "sliced": "^1.0.1"
   }
 }

@@ -1,11 +1,8 @@
 'use strict';
-var all = require('promise-all');
+var apply = require('promise-fnapply');
 var sliced = require('sliced');
 
-module.exports = function call() {
-	var args = sliced(arguments);
-	return all(args).then(function (values) {
-		var fn = values.shift();
-		return fn.apply(undefined, values);
-	});
+module.exports = function call(fn) {
+	var args = sliced(arguments, 1);
+	return apply(fn, args);
 };
