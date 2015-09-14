@@ -35,7 +35,7 @@ call(greet, Promise.resolve('world'))
 
 | Name | Type | Description |
 |------|------|-------------|
-| `fn` | `Function`| The function to call with the resolved promises as arguments |
+| `fn` | `Function|Promise { [Function] }`| The function, or a promise resolving to a function, to call with the resolved promises as arguments |
 | `...promises` | `Promise`| The arguments to pass to `fn` when they all are resolved |
 
 Returns: `Promise`, which resolves to the result of calling `fn` with the resolved values of `...promises`.

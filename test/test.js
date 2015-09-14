@@ -42,3 +42,17 @@ test('non-promise values', function (assert) {
 			assert.is(actual, expected);
 		});
 });
+
+test('function to call is a promise', function (assert) {
+	assert.plan(1);
+	function join(sep) {
+		return Promise.resolve(function () {
+			return sliced(arguments).join(sep);
+		});
+	}
+	return call(join(' '), 'hello', 'world')
+		.then(function (actual) {
+			var expected = 'hello world';
+			assert.is(actual, expected);
+		});
+});
